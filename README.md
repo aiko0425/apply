@@ -49,14 +49,15 @@
       正しくプログラムを実行するにはログインするアカウントのメールアドレスとパスワードが必要です。  
       メールアドレスは8行目のUSERの部分を、パスワードは9行目のPASSの部分を書き換えてください。  
       
-　  - Install  
-      プログラムを動かすには以下のものが必要です  
-       「selenimu」「Firefox」「BeautifulSoup4」「Geckodriver」  
-      
-    - Command  
-      - Firefoxのインストール  
-      　sudo apt-get install -y firefox  
-      - Seleniumのインストール  
-        pip3 install selenium  
-      - BeautifulSoup4のインストール  
-        pip3 install beautifulsoup4  
+　  
+   - Install  
+     プログラムを動かすには以下のものが必要です  
+     「selenimu」「Firefox」「BeautifulSoup4」「Geckodriver」  
+     
+   - Command  
+     - Firefoxのインストール  
+       sudo apt-get install -y firefox  
+     - Seleniumのインストール  
+       pip3 install selenium  
+     - BeautifulSoup4のインストール  
+       pip3 install beautifulsoup4  

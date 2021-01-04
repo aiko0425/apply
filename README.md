@@ -51,7 +51,7 @@
       
 　  - Install  
       プログラムを動かすには以下のものが必要です  
-       「selenimu」「Firefox」「BeautifulSoup4」「Geckodriver」
+       「selenimu」「Firefox」「BeautifulSoup4」「Geckodriver」  
       
     - Command  
       - Firefoxのインストール  

@@ -60,3 +60,13 @@
         pip3 install selenium  
       - BeautifulSoup4のインストール  
         pip3 install beautifulsoup4  
+  - chino_app
+    - Overview
+      画像の数字を予測するアプリです。
+    - Data
+      学習データにMNISTを用いています。学習用データ6万件、テストデータ1万件をダウンロードし、結合した「INPUT.csv」を学習データに利用。ただしGithub「INPUT.csv」が100Mbを超えたためアップロードされていません。
+    - File
+      「chino.py」のファイルはchinoアプリを実行させるファイルです。
+      「chino_load2.py」のファイルは学習するファイルです。
+      「freq.pkl3」は学習したパラメーターが保存されているバイナリーファイルです。「chino_load2.py」を実行すると作成されます。
+

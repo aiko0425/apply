@@ -43,10 +43,9 @@ n_iter =20
 clf = clf.fit(data["images"], data["labels"])
 
 #正答率表示
-print("各正解率=", clf)
-print("正解率=", clf.mean())
 print(clf.best_estimator_)
 print(clf.best_params_)
+print("正答率＝",clf.best_score_)
 
 #学習データを保存する
 joblib.dump(clf, "freq.pkl3")

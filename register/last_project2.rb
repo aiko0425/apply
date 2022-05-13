@@ -12,12 +12,15 @@ seasons = ["前期","後期"]
 #質問配列
 questions = ["登録する教科名", "教員名", "曜日", "時間", "単位"]
 
+#必修配列
+musts = ["必修","必修ではない"]
+
 #生徒ファイル配列
-numbers = ["19241273_all.csv","19241233_all.csv"]
+numbers = ["19241273_all.csv","19241233_all.csv","19241277_all.csv"]
 
 ##メソッド定義##
 #教師実行メソッド
-def teacher(kurasuta, file, seasons, questions)
+def teacher(kurasuta, file, seasons, questions, musts)
   #登録する教科情報配列
   subjects = []
 
@@ -54,8 +57,20 @@ def teacher(kurasuta, file, seasons, questions)
       subject.push gets.chomp  #教科情報の配列に追加
     end
 
+    #必修か必修でないか
+    puts "-"*30
+    puts <<~EOS
+    必修ですか？
+    1.#{musts[0]}　2.#{musts[1]}
+    EOS
+    print '選択:'
+    subject.push musts[gets.chomp.to_i - 1]
+
     #ファイルへの書き込み
-    
+    File.open(file[classes], "a") do |fo|
+      fo.puts "#{subject[1]},#{subject[5]},#{subject[2]},#{subject[0]},#{subject[3]},#{subject[4]},#{subject[6]}"
+    end
+
     #繰り返しの終了
     puts <<~FIN
     他に追加する教科はありますか？
@@ -183,7 +198,7 @@ select = gets.chomp.to_i
 case select
 #教師側のプログラム
 when 1
-  teacher(kurasuta, file, seasons, questions)
+  teacher(kurasuta, file, seasons, questions, musts)
 
 
 #生徒側のプログラム
